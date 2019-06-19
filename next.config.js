@@ -4,6 +4,7 @@ const withBundleAnalyzer = require("@zeit/next-bundle-analyzer");
 
 const withCSS = require("@zeit/next-css");
 const withSass = require("@zeit/next-sass");
+
 module.exports = withPlugins(
   [[withTypescript], [withCSS], [withSass], [withBundleAnalyzer]],
   {
@@ -17,11 +18,3 @@ module.exports = withPlugins(
     },
   }
 );
-
-// module.exports = withTypescript(
-//     withCSS(
-//       withSass({
-//         target: "serverless",
-//       })
-//     )
-//   );

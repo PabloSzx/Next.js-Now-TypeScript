@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "nextjs",
+  "alias": "nextjs_now_typescript_redux.now.sh",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
   "env": {
     "IS_NOW": "true"

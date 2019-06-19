@@ -1,15 +1,24 @@
 import React from "react";
-import { AppComponentType, Container } from "next/app";
+import App, { Container } from "next/app";
+import { Provider } from "react-redux";
+import withRedux, { AppProps } from "next-redux-wrapper";
 
-const App: AppComponentType = ({ Component }) => {
-  return (
-    <Container>
-      <Component />
-    </Container>
-  );
-};
+import { makeStore } from "@Redux";
 
-App.getInitialProps = async ({ Component, ctx, router }) => {
+class MyApp extends App<AppProps> {
+  render(): JSX.Element {
+    const { Component, store } = this.props;
+    return (
+      <Container>
+        <Provider store={store}>
+          <Component />
+        </Provider>
+      </Container>
+    );
+  }
+}
+
+MyApp.getInitialProps = async ({ Component, ctx, router }) => {
   let pageProps = {};
 
   if (Component.getInitialProps) {
@@ -21,4 +30,4 @@ App.getInitialProps = async ({ Component, ctx, router }) => {
   return { pageProps };
 };
 
-export default App;
+export default withRedux(makeStore)(MyApp);

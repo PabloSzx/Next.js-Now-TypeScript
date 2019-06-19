@@ -15,6 +15,11 @@
     "sourceMap": true,
     "strict": true,
     "target": "esnext",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@Redux": ["./src/Redux"],
+      "@ReduxTypes": ["./src/Redux/Types"],
+      "@Interfaces/*": ["./src/Interfaces/*"]
+    }
   }
 }

@@ -6,8 +6,9 @@
     "IS_NOW": "true"
   },
   "routes": [
-    { "src": "/asd/zxc", "dest": "/asd/zxc" },
     { "src": "/asd", "dest": "/asd" },
-    { "src": "/", "dest": "/" }
+    { "src": "/test", "dest": "/asd/zxc" },
+    { "src": "/other", "dest": "/" },
+    { "src": "/", "dest": "/asd/zxc" }
   ]
 }

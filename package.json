@@ -1,11 +1,16 @@
 {
   "name": "next.js-now-typescript",
   "version": "1.0.0",
-  "main": "\"\"",
-  "repository": "https://github.com/PabloSzx/Next.js-Now-TypeScript.git",
-  "author": "PabloSz <pablosaez1995@gmail.com>",
-  "license": "MIT",
   "private": false,
+  "repository": "https://github.com/PabloSzx/Next.js-Now-TypeScript.git",
+  "license": "MIT",
+  "author": "PabloSz <pablosaez1995@gmail.com>",
+  "main": "",
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "start": "next start"
+  },
   "dependencies": {
     "@zeit/next-bundle-analyzer": "^0.1.2",
     "@zeit/next-css": "^1.0.1",

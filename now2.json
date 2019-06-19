@@ -4,11 +4,5 @@
   "builds": [{ "src": "next.config.json", "use": "@now/next" }],
   "env": {
     "IS_NOW": "true"
-  },
-  "routes": [
-    { "src": "/", "dest": "/" },
-    { "src": "/asd", "dest": "/asd" },
-    { "src": "/asd/zxc/", "dest": "asd/zxc" },
-    { "src": "/test", "dest": "/asd/zxc" }
-  ]
+  }
 }
